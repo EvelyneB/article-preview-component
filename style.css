@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Inter:wght@400;700&family=Josefin+Sans:wght@300;400;600&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca&family=Manrope:wght@500;700&family=Poppins:ital,wght@0,500;0,600;0,700;1,400&family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root{
+    /* background and background arrow in inactive state */
+    --blue-background:hsl(210, 46%, 95%);
+    /*share text*/
+    --ligh-blue-text:hsl(212, 23%, 69%);
+    /* arrow active state and p */
+    --dark-blue-text-arrow: hsl(214, 17%, 51%);
+    /* grey card and H1 */
+    --very-dark-blue: hsl(217, 19%, 35%); 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--blue-background);
+    font-family: "Manrope", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 1.5rem;
+    max-width: 25rem;
+}
+
+.image{
+    object-fit: cover;
+    object-position: top;
+    height: 13.5rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius:1rem;
+    max-width: 100%;
+}
+    
+.white-card{
+    position: relative;
+    background-color: #fff;
+    padding: 1.6rem 1rem 0rem 1.6rem;
+    color: var(--very-dark-blue);
+    border-bottom-left-radius:1rem ;
+    border-bottom-right-radius:1rem;
+    z-index: 2;
+}
+
+.h1{
+    font-size: 1rem;
+    line-height: 1.6rem;
+    padding-right: 1rem;
+}
+
+.p{
+    color: var(--dark-blue-text-arrow);
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    padding: 1rem 0rem 1.8rem 0;
+}
+
+/*WHITE CARD PICTURE*/
+
+.avatar{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 1rem;  
+}
+
+.figure{
+    display: flex;
+}
+
+.avatar-img{
+    border-radius: 50%;
+    height: 3rem;
+    width: auto;
+}
+
+.avatar-lines{
+    flex-direction: row;
+    justify-content: flex-start; 
+    padding-left: 0.8rem;
+}
+
+.name{
+    font-weight: 700;
+}
+   
+.date{
+    font-size: 0.9rem;
+    color: var(--ligh-blue-text);
+}
+
+/*GREY CARD SOCIAL MEDIA*/
+
+.grey-card-content{
+    position: absolute;
+    background-color: var(--very-dark-blue);
+    display: none;
+    align-items: center;
+    bottom: 0;
+    right: 0;
+    display: none;
+    z-index: 4;
+    width: 100%;
+    height: 4.25rem;
+    border-bottom-left-radius:1rem ;
+    border-bottom-right-radius:1rem;
+}
+
+.show{
+    display: flex;
+}
+
+.share-txt{
+    text-transform: uppercase;
+    color: var(--ligh-blue-text);
+    padding-left: 2rem;
+    letter-spacing: 0.2rem;
+}
+
+.fb-img{
+    height: 1.6rem;
+    width: auto;
+    padding-left: 1rem;
+}
+
+.twitter-img{
+    height:1.6rem ;
+    padding-left: 1rem; 
+}
+
+.pinterest-img{
+    height:1.6rem;
+    padding-left: 1rem;
+}
+
+/**********/
+
+.arrow{
+    z-index: 5;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color:var(--blue-background);
+    border: none;
+    height: 100%;
+    width: auto;
+    padding: 0.7rem;
+    margin-top: 0.5rem;
+}   
+
+:focus {
+    outline: 0;
+  }
+
+.active{
+    background-color: var(--dark-blue-text-arrow);
+}
+
+.actif{
+    fill: #fff;
+}
+
+.arrow:hover {
+    background-color: var(--ligh-blue-text);   
+}
+
+
+/******MEDIA QUERY******/
+
+@media (min-width: 1280px){
+
+.container{
+    max-width: 45rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+    }
+
+.image{
+    display: flex;
+    max-width: 19rem;
+    object-fit: cover;
+    object-position: top;
+    height: auto;
+    border-radius: 1rem 0 0 1rem;
+}
+    
+.white-card{
+    border-radius: 0 1rem 1rem 0;
+    display: block;
+    width: 34rem;
+}
+
+.h1,
+.p,
+.avatar{
+    width: 25rem;
+}
+
+.h1{
+    font-size: 1.2rem;
+}
+
+.grey-card-content{
+    justify-content: flex-start;
+    border-radius:1rem;
+    position: absolute;
+    top: 8rem;
+    left: 16rem;
+    width: 17rem ;    
+}
+
+/*Triangle reversed shape*/
+.grey-card-content::after{
+    content: "";
+    position: absolute;
+    right: 7.5rem;
+    bottom: -0.875rem;
+    border-top: 0.875rem solid #48556a;
+    border-right: 0.875rem solid transparent;
+    border-left: 0.875rem solid transparent;
+}
+
+.avatar-lines{
+    display: flex;
+    flex-direction: column;
+    padding-right: 8.5rem;
+}
+
+.arrow:hover {
+    background-color: var(--ligh-blue-text);   
+}
+
+.figure{
+    display: flex;
+    flex-direction: row;
+}}
+
+
+@media (min-width: 360px) and (max-width:375px){
+.grey-card-content{
+    height:5.25rem;
+}
+
+.arrow{
+    margin-bottom: 0.5rem;
+}}
+
+@media (min-width: 411px) and (max-width:540px){
+.arrow{
+        margin-right: 0.52rem;
+}}
+    
+
+
